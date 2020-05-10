@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class App
 {
     protected static $registry = [];
@@ -10,10 +12,10 @@ class App
     }
 
     public static function get($key)
-    {   
-        if(array_key_exists($key,static::$registry)){
+    {
+        if (array_key_exists($key, static::$registry)) {
             return static::$registry[$key];
-        }else{
+        } else {
             throw new Exception("No {$key} is bound in the container.");
         }
     }

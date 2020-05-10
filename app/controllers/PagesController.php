@@ -1,22 +1,27 @@
 <?php
+
+namespace App\Controllers;
+
+use App\core\App;
+
 class PagesController
 {
     public function home()
     {
         $tasks = App::get('database')->selectAll('todos'); // Model
 
-        return view('index',['tasks'=>$tasks]); // View
+        return view('index', ['tasks' => $tasks]); // View
     }
 
     public function contact()
     {
         $users = App::get('database')->selectAll('users');
-        return view('contact',['users'=>$users]);
+        return view('contact', ['users' => $users]);
     }
 
     public function about()
     {
-        $company="Laracast";
-        return view('about',['company'=>$company]);
+        $company = 'Laracast';
+        return view('about', ['company' => $company]);
     }
 }
