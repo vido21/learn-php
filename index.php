@@ -1,8 +1,9 @@
 <?php
 
+require 'vendor/autoload.php';
 $database = require 'core/boostrap.php';
 
-$uri = trim($_SERVER['REQUEST_URI'], '/');
+// $uri = trim($_SERVER['REQUEST_URI'], '/');
 // $router = new Router;
 // require 'routes.php';
 // require $router->direct($uri);
